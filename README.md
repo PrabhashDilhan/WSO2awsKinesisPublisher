@@ -16,7 +16,8 @@ Para el correcto funcionamiento este mediador, es necesario añadir al script de
  
 Donde en el primero de ellos, se pondrá la ruta del fichero de configuración --> custom-hazelcast-client.xml.
 
-Además de esta configuración, este mediador debe contener en la carpeta "resources" la librería de Hazelcast (imdg-price-stocks-1.0.0.jar) 
+Además de esta configuración, este mediador debe contener en la carpeta "resources" la librería de Hazelcast (imdg-price-stocks-1.0.0.jar) y es necesario tener el servidor de Hazelcast
+que tengamos configurado levantado en el momento de desplegar el mediador (ya que estable conexión en el inicio del ESB y la cierra el apagarlo).
 
 ### Importar el proyecto en eclipse
 

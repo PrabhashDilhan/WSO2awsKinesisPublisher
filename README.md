@@ -28,8 +28,8 @@ Para importar un proyecto, se debe importar como proyecto maven en eclipse media
 Lo primero que debemos hacer el compilar el proyecto de Hazelcast (imdg-price-stocks) para generar el fichero jar imdg-price-stocks-1.0.0.jar que encontraremos en la carpeta ".target".
 Copiaremos dicha librería en este mediador (HazelcastMediator) dentro de la carpeta "resources" que podemos ver en la estructura del proyecto.
 
-Tras haber copiado la librería, vamos a compilar el mediador realizando `mvn clean install` sobre el pom padre (aÃ±adiendo el profile conveniente). 
-Esto generarÃ¡ un jar dentro del proyecto en la carpeta ".target" con el siguiente nombre HazelcastMediator-1.0.0.jar.
+Tras haber copiado la librería, vamos a compilar el mediador realizando `mvn clean install` sobre el pom padre (añadiendo el profile conveniente). 
+Esto generará un jar dentro del proyecto en la carpeta ".target" con el siguiente nombre HazelcastMediator-1.0.0.jar.
 
 Una vez generado el jar, será necesario añadir este fichero a la carpeta <wso2ei-6.6.0>/dropins y borrar el anterior si no es necesario mantenerlo.
  

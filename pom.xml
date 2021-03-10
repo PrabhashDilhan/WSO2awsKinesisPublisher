@@ -23,6 +23,27 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>es.fluidra.hazelcast.prices.process.task</groupId>
+      <artifactId>GetPricesPerClientNItemsCallable</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/imdg-price-stocks-1.0.0.jar</systemPath>
+    </dependency>
+    <!--
+       org/apache/logging/log4j/LogManager
+
+
+    <dependency>
+      <groupId>es.fluidra.hazelcast.prices.data.values</groupId>
+      <artifactId>NetProductPriceResponse</artifactId>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/imdg-price-stocks-1.0.0.jar</systemPath>
+    </dependency>
+-->
+    <!-- Start Deprecated - ->
     <dependency>
       <groupId>es.fluidra.prices.data.process</groupId>
       <artifactId>GetSinglePricePerItemClientCallable</artifactId>
@@ -30,10 +51,23 @@
       <scope>system</scope>
       <systemPath>${project.basedir}/src/main/resources/imdg-price-stocks-1.0.0.jar</systemPath>
     </dependency>
+    <!- - End Deprecated -->
+
+    <!-- Log4j2 As logging implementation -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.14.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.14.0</version>
+		</dependency>
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
-      <version>20201115</version>
+      <version>20210307</version>
     </dependency>
     <dependency>
         <groupId>org.apache.synapse</groupId>
@@ -107,7 +141,7 @@
           <instructions>
             <Bundle-SymbolicName>HazelcastMediator</Bundle-SymbolicName>
             <Bundle-Name>HazelcastMediator</Bundle-Name>
-            <Private-Package>com.hazelcast.*,es.fluidra.*,org.json.*</Private-Package>
+            <Private-Package>com.hazelcast.*,es.fluidra.*,org.json.*,org.apache.logging.log4j.*</Private-Package>
             <Export-Package>es.inetum.*</Export-Package>
             <Import-Package>
               !sun.misc,
@@ -117,6 +151,7 @@
               !com.hazelcast.*,
               !es.fluidra.*,
               !org.json.*,
+              !org.apache.logging.log4j.*,
               org.apache.log4j.*;resolution:=optional,
               *;resolution:=optional
             </Import-Package>

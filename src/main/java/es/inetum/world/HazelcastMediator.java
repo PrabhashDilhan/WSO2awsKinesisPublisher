@@ -131,9 +131,8 @@ public class HazelcastMediator extends AbstractMediator implements ManagedLifecy
 			        // Discounts
 			        JSONObject discountsObject = new JSONObject();
 			        discountsObject.put("total", price.getDiscounts().getTotal());
-			        for (int i=0;i<price.getDiscounts().getPercentages().size();i++) {
-			        	discountsObject.put("discount"+i, price.getDiscounts().getPercentages().get(i));
-			        }
+			        discountsObject.put("percentages", price.getDiscounts().getPercentages());
+			       
 			        JSONArray discountsArray = new JSONArray();
 			        discountsArray.put(discountsObject);
 			        p.put("discounts", discountsArray);

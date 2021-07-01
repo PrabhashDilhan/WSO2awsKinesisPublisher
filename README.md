@@ -2,12 +2,12 @@
 
 ## This class mediator can be used to publish messages to AWS kinesis using WSO2 EI.
 
-*SAMPLE SERVICE*
-
 ### Steps to appy the class mediator
 
 1. build maven project and copy the bundle jar file to the <EI_HOME>/dropins direcotry.
 2. Start the server and you can use below service to test class mediator.
+
+*SAMPLE SERVICE*
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

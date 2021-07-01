@@ -4,6 +4,11 @@
 
 *SAMPLE SERVICE*
 
+### Steps to appy the class mediator
+
+1. build maven project and copy the bundle jar file to the <EI_HOME>/dropins direcotry.
+2. Start the server and you can use below service to test class mediator.
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <proxy xmlns="http://ws.apache.org/ns/synapse"
